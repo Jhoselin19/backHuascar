@@ -4,19 +4,19 @@ const bcrypt = require('bcryptjs');
 const connection = require('../database');
 
 const User = {
-  create: async function ({ username, email, password }) {
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const query = 'INSERT INTO users (username, email, password) VALUES (?, ?, ?)';
-    const [result] = await connection.promise().execute(query, [username, email, hashedPassword]);
+  create: async function ({ Nombre, Apellido, DNI, Telefono, Genero, FechaNacimiento, Contraseña  }) {
+    const hashedPassword = await bcrypt.hash(Contraseña, 10);
+    const query = 'INSERT INTO users (Nombre, Apellido, DNI, Telefono, Genero, FechaNacimiento, Contraseña) VALUES (?, ?, ?, ?, ?, ?, ?)';
+    const [result] = await connection.promise().execute(query, [Nombre, Apellido, DNI, Telefono, Genero, FechaNacimiento, hashedPassword]);
     return result;
   },
-  findByUsername: async function (username) {
-    const query = 'SELECT * FROM users WHERE username = ?';
-    const [rows] = await connection.promise().execute(query, [username]);
+  findByUsername: async function (dni) {
+    const query = 'SELECT * FROM users WHERE DNI = ?';
+    const [rows] = await connection.promise().execute(query, [dni]);
     return rows[0];
   },
-  validatePassword: async function (user, password) {
-    return await bcrypt.compare(password, user.password);
+  validatePassword: async function (DNI, Contraseña) {
+    return await bcrypt.compare(Contraseña, DNI.Contraseña);
   },
 };
 
