@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gentelella Alela! | </title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="build/css/custom.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella
+                                Alela!</span></a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>Welcome,</span>
+                            <h2>John Doe</h2>
+                        </div>
+                    </div>
+                    <!-- /menu profile quick info -->
+
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>General</h3>
+                            <ul class="nav side-menu">
+                                <li><a><i class="fa fa-home"></i> Inicio <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="index.html">Lista de Autos</a></li>
+                                        <li><a href="index2.html">Graficos Estadisticos</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="registro.html"><i class="fa fa-edit"></i> Registro Auto</a></li>
+                                <li><a><i class="fa fa-desktop"></i> Facturas</a></li>
+                                <li><a href="reporte.html"><i class="fa fa-bar-chart-o"></i> Reporte datos</a>
+                                </li>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- /sidebar menu -->
+
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="Settings">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Lock">
+                            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+            <!-- page content -->
+            <div>
+                <div class="right_col" role="main">
+                <div class="nav toggle">
+                    <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                </div>
+                <div class="">
+                    <div class="page-title">
+                        <div class="title_left">
+                            <h3>Registro Vehicular</h3>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <div class="row">
+
+                            <div class="col-md-12 col-sm-12 ">
+                                <div class="x_panel">
+                                    <br>
+
+                                    <!-- Smart Wizard -->
+                                    <div id="wizard" class="form_wizard wizard_horizontal">
+                                        <ul class="wizard_steps">
+                                            <li>
+                                                <a href="#step-1">
+                                                    <span class="step_no">1</span>
+                                                    <span class="step_descr">
+                                                        Step 1<br />
+                                                        <small>Peso Vehicular</small>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#step-2">
+                                                    <span class="step_no">2</span>
+                                                    <span class="step_descr">
+                                                        Step 2<br />
+                                                        <small>Placa Vehicular</small>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#step-3">
+                                                    <span class="step_no">3</span>
+                                                    <span class="step_descr">
+                                                        Step 3<br />
+                                                        <small>Detalle de Registro</small>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#step-4">
+                                                    <span class="step_no">4</span>
+                                                    <span class="step_descr">
+                                                        Step 4<br />
+                                                        <small>Confirmación</small>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div id="step-1">
+                                            <form class="form-horizontal form-label-left">
+
+                                                <div class="form-group row">
+                                                    <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                        for="formFileLg">Subir Imagen <span
+                                                            class="required">*</span></label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="formFileLg"
+                                                                (change)="onFileChange($event)">
+                                                            <label class="custom-file-label"
+                                                                for="formFileLg">Seleccionar archivo</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                        for="last-name">CARGA UTIL<span class="required">*</span>
+                                                    </label>
+                                                    <div class="col-md-6 col-sm-6 ">
+                                                        <input type="text" id="last-name" name="last-name"
+                                                            required="required" class="form-control ">
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <br>
+
+                                            </form>
+
+                                        </div>
+                                        <div id="step-2">
+                                            <form class="form-horizontal form-label-left">
+                                                <div class="form-group row">
+                                                    <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                        for="last-name">Placa Vehicular<span class="required">*</span>
+                                                    </label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input type="text" id="last-name" name="last-name"
+                                                            required="required" class="form-control ">
+                                                    </div>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                        <div id="step-3">
+                                            <div class="form-container">
+                                                <h2>Detalle Registro</h2>
+                                                <form action="">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                            for="placa">N° de placa:<span
+                                                                class="required">*</span></label>
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <input type="text" id="placa" name="placa"
+                                                                required="required" class="form-control "
+                                                                value="ADN-9333">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                            for="propietario">Propietario:<span
+                                                                class="required">*</span></label>
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <input type="text" id="propietario" name="propietario"
+                                                                required="required" class="form-control "
+                                                                value="Ingeniería Soluciones Trujillo S.R.L.">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                            for="carro">Tipo de carro:<span
+                                                                class="required">*</span></label>
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <input type="text" id="carro" name="carro"
+                                                                required="required" class="form-control "
+                                                                value="Camión 8 TM">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                            for="subtotal">SubTotal:<span
+                                                                class="required">*</span></label>
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <input type="text" id="subtotal" name="subtotal"
+                                                                required="required" class="form-control " value="S/ 80">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                            for="igv">IGV:<span class="required">*</span></label>
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <input type="text" id="igv" name="igv" required="required"
+                                                                class="form-control " value="S/ 0">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                            for="total">Total:<span class="required">*</span></label>
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <input type="text" id="total" name="total"
+                                                                required="required" class="form-control " value="S/ 80">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                            for="fecha">Fecha:<span class="required">*</span></label>
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <input type="text" id="fecha" name="fecha"
+                                                                required="required" class="form-control "
+                                                                value="10/09/2023">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label col-md-3 col-sm-3 label-align"
+                                                            for="hora">Hora:<span class="required">*</span></label>
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <input type="text" id="hora" name="hora" required="required"
+                                                                class="form-control " value="9:45">
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div id="step-4">
+                                            <h2 class="StepTitle">Confirmación</h2>
+                                            <div class="form-group row">
+                                                <div class="col-md-6 col-sm-6 offset-md-3">
+                                                    <div class="alert alert-success" role="alert">
+                                                        ¡REGISTRO EXITOSO!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- End SmartWizard Content -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="vendors/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- FastClick -->
+        <script src="vendors/fastclick/lib/fastclick.js"></script>
+        <!-- NProgress -->
+        <script src="vendors/nprogress/nprogress.js"></script>
+        <!-- jQuery Smart Wizard -->
+        <script src="vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+        <!-- Custom Theme Scripts -->
+        <script src="build/js/custom.min.js"></script>
+
+        <script src="vendors/dropzone/dist/min/dropzone.min.js"></script>
+
+
+</body>
+
+</html>
