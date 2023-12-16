@@ -24,7 +24,7 @@ router.post('/signup', async (req, res, next) => {
             expiresIn: 60 * 60 * 24,
         });
 
-        res.sendFile(path.join(__dirname, '../public/registro.html'));
+        res.sendFile(path.join(__dirname, '../public/register.html'));
 
     } catch (error) {
         next(error);
@@ -45,7 +45,7 @@ router.get('/dashboard', verifyToken, async (req, res, next) => {
 });
 
 router.get('/register', function (req, res) {
-    res.sendFile(path.join(__dirname, '../public/registro.html'));
+    res.sendFile(path.join(__dirname, '../public/register.html'));
 });
 
 router.post('/signin', async (req, res, next) => {
